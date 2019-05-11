@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@angular/cli": "8.0.0-rc.3",
     "@types/node": "^12.0.0",
     "@types/rimraf": "^2.0.2",
     "rimraf": "^2.6.3",
