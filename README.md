@@ -12,4 +12,4 @@ Inspired by https://github.com/cexbrayat/angular-cli-diff. The difference is tha
 
 ## Using the diffs
 
-Visit a URL like this to view the relevant diffs: https://github.com/simontonsoftware/angular-cli-diffs/compare/7.0.5..7.3.8. Ignore any files that are at the root of the repository; the relevant files are all in `the-project/`.
+Visit a URL like this to view the relevant diffs: https://github.com/simontonsoftware/angular-cli-diffs/compare/7.0.5..8.0.0. Ignore any files that are at the root of the repository; the relevant files are all in `the-project/`.
