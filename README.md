@@ -13,3 +13,12 @@ Inspired by https://github.com/cexbrayat/angular-cli-diff. The difference is tha
 ## Using the diffs
 
 Visit a URL like this to view the relevant diffs: https://github.com/simontonsoftware/angular-cli-diffs/compare/7.0.5..8.0.0. Ignore any files that are at the root of the repository; the relevant files are all in `the-project/`.
+
+## Generating new diffs
+
+Starting from master, run:
+
+```bash
+# to generate for 8.0.0:
+yarn gen 8.0.0
+```
