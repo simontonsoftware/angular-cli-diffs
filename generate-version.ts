@@ -23,7 +23,7 @@ if (flags.has('-lib')) {
 }
 if (flags.has('-pwa')) {
   runAndCommit(
-    `npx ng add @angular/pwa --project ${projectName}`,
+    `npx ng add @angular/pwa --project ${projectName} --skip-install`,
     { cwd: projectName },
   );
 }
