@@ -22,10 +22,8 @@ if (flags.has('-lib')) {
   );
 }
 if (flags.has('-pwa')) {
-  runAndCommit(
-    `npx ng add @angular/pwa --project ${projectName}`,
-    { cwd: projectName },
-  );
+  runAndCommit(`npx ng add @angular/pwa`, { cwd: projectName });
+  rimraf.sync(`${projectName}/node_modules`);
 }
 
 function runAndCommit(command: string, options?: ExecSyncOptions) {
