@@ -17,4 +17,4 @@ Visit a URL like this to view the relevant diffs: https://github.com/simontonsof
 ## Generating new diffs
 
 1. Start from `master`
-1. `npx ts-node generate-version X.X.X [-lib] [-pwa]`
+1. `npx ts-node generate-version X.X.X [-lib] [-mat] [-pwa]`

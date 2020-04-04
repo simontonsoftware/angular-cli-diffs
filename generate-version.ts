@@ -21,10 +21,13 @@ if (flags.has('-lib')) {
     { cwd: projectName },
   );
 }
-if (flags.has('-pwa')) {
-  runAndCommit(`npx ng add @angular/pwa`, { cwd: projectName });
-  rimraf.sync(`${projectName}/node_modules`);
+if (flags.has('-mat')) {
+  runAndCommit('npx ng add @angular/material --interactive=false', { cwd: projectName });
 }
+if (flags.has('-pwa')) {
+  runAndCommit('npx ng add @angular/pwa --interactive=false', { cwd: projectName });
+}
+rimraf.sync(`${projectName}/node_modules`);
 
 function runAndCommit(command: string, options?: ExecSyncOptions) {
   execSync(command, options);
