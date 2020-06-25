@@ -17,7 +17,7 @@ runAndCommit(`yarn add -D @angular/cli@${version}`);
 runAndCommit(
   `npx ng new ${projectName} --routing=${flags.has(
     "-route"
-  )} --skip-install --no-interactive`
+  )} --strict=${flags.has("-strict")} --skip-install --no-interactive`
 );
 if (flags.has("-lib")) {
   runAndCommit(

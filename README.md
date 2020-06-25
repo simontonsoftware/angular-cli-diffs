@@ -19,8 +19,9 @@ The branch names reveal which options were used to generate them. The options ar
 - **-mat:** includes material design, added with `ng add @angular/material`
 - **-pwa:** includes configuration for the app to be a progressive web app, added with `ng add @angular/pwa`
 - **-route:** includes configuration for routing, added with the `--routing=true` flag when generating the original project
+- **-strict:** scaffolds the project with the `--strict` flag
 
 ## Generating new diffs
 
 1. Start from `master`
-1. `npx ts-node generate-version X.X.X [-lib] [-mat] [-pwa] [-route]`
+1. `npx ts-node generate-version X.X.X [-lib] [-mat] [-pwa] [-route] [-strict]`
