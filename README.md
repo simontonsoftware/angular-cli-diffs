@@ -17,11 +17,13 @@ Visit a URL like this to view the relevant diffs: https://github.com/simontonsof
 The branch names reveal which options were used to generate them. The options are:
 - **-lib:** includes a library project, added with `ng generate library the-library`
 - **-mat:** includes material design, added with `ng add @angular/material`
+- **-noApp:** scaffolds the project with `--createApplication=flase`
 - **-pwa:** includes configuration for the app to be a progressive web app, added with `ng add @angular/pwa`
 - **-route:** includes configuration for routing, added with the `--routing=true` flag when generating the original project
 - **-strict:** scaffolds the project with the `--strict` flag
+- **-subApp:** includes an application project, added with `ng generate application the-application`
 
 ## Generating new diffs
 
 1. Start from `master`
-1. `npx ts-node generate-version X.X.X [-lib] [-mat] [-pwa] [-route] [-strict]`
+1. `npx ts-node generate-version X.X.X [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
