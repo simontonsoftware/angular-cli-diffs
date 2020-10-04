@@ -16,7 +16,7 @@ rimraf.sync(projectName);
 
 runAndCommit(`yarn add -D @angular/cli@${version}`);
 runAndCommit(
-  `npx ng new ${projectName}  --createApplication=${flags.has(
+  `npx ng new ${projectName} --createApplication=${!flags.has(
     "noApp"
   )} --routing=${flags.has("-route")} --strict=${flags.has(
     "-strict"
