@@ -18,9 +18,7 @@ runAndCommit(`yarn add -D @angular/cli@${version}`);
 runAndCommit(
   `npx ng new ${projectName} --createApplication=${!flags.has(
     "-noApp"
-  )} --routing=${flags.has("-route")} --strict=${flags.has(
-    "-strict"
-  )} --skip-install --no-interactive`
+  )} --routing=${flags.has("-route")} --skip-install --no-interactive`
 );
 if (flags.has("-subApp")) {
   runAndCommit(
