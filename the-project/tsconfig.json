@@ -15,6 +15,12 @@
     },
     {
       "path": "./projects/the-application/e2e/tsconfig.json"
+    },
+    {
+      "path": "./projects/the-library/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/the-library/tsconfig.spec.json"
     }
 ]
 }
