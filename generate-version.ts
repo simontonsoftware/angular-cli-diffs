@@ -20,7 +20,7 @@ runAndCommit(
     "-noApp"
   )} --routing=${flags.has("-route")} --strict=${flags.has(
     "-strict"
-  )} --skip-install --no-interactive`
+  )} --skip-install --no-interactive --packageManager=yarn --style=scss`
 );
 if (flags.has("-subApp")) {
   runAndCommit(
