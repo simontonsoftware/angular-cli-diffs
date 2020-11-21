@@ -44,6 +44,10 @@ if (flags.has("-pwa")) {
     cwd: projectName,
   });
 }
+if (flags.has("-fire")) {
+  console.error("@angular/fire must be added manually. Run this and commit:");
+  console.log("cd the-project && npx ng add @angular/fire");
+}
 rimraf.sync(`${projectName}/node_modules`);
 
 function runAndCommit(command: string, options?: ExecSyncOptions) {
