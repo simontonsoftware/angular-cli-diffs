@@ -44,6 +44,11 @@ if (flags.has("-pwa")) {
     cwd: projectName,
   });
 }
+if (flags.has("-fire")) {
+  runAndCommit("npx ng add @angular/fire --interactive=false", {
+    cwd: projectName,
+  });
+}
 rimraf.sync(`${projectName}/node_modules`);
 
 function runAndCommit(command: string, options?: ExecSyncOptions) {
