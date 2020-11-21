@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "private-bounce": {
+      "hosting": {
+        "the-project": [
+          "the-firebase-project-name"
+        ]
+      }
+    }
+  }
+}
