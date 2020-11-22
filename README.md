@@ -27,4 +27,4 @@ The branch names reveal which options were used to generate them. The options ar
 ## Generating new diffs
 
 1. Start from `master`
-1. `npx ts-node generate-version X.X.X [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
+1. `yarn gen X.X.X [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
