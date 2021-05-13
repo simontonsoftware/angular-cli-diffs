@@ -15,6 +15,7 @@ Inspired by https://github.com/cexbrayat/angular-cli-diff, this project does the
 Visit a URL like this to view the relevant diffs: https://github.com/simontonsoftware/angular-cli-diffs/compare/7.0.5..8.0.0. Ignore any files that are at the root of the repository; the relevant files are all in `the-project/`.
 
 The branch names reveal which options were used to generate them. The options are:
+- **-eslint:** includes angular-eslint config, added with `ng add @angular-eslint/schematics`
 - **-fire:** includes firebase, added with `ng add @angular/fire`
 - **-lib:** includes a library project, added with `ng generate library the-library`
 - **-mat:** includes material design, added with `ng add @angular/material`
@@ -28,4 +29,4 @@ The branch names reveal which options were used to generate them. The options ar
 
 1. Start from `master`
 1. Ensure you have opted out analytics by running `ng analytics off`
-1. `yarn gen X.X.X [-fire] [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
+1. `yarn gen X.X.X [-eslint] [-fire] [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
