@@ -27,4 +27,5 @@ The branch names reveal which options were used to generate them. The options ar
 ## Generating new diffs
 
 1. Start from `master`
-1. `yarn gen X.X.X [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
+1. Ensure you have opted out analytics by running `ng analytics off`
+1. `yarn gen X.X.X [-fire] [-lib] [-mat] [-noApp] [-pwa] [-route] [-strict] [-subApp]`
