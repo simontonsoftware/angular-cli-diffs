@@ -35,12 +35,12 @@ if (flags.has("-lib")) {
   );
 }
 if (flags.has("-mat")) {
-  runAndCommit("npx ng add @angular/material --interactive=false", {
+  runAndCommit("npx ng add @angular/material --interactive=false --skip-confirmation=true", {
     cwd: projectName,
   });
 }
 if (flags.has("-pwa")) {
-  runAndCommit("npx ng add @angular/pwa --interactive=false", {
+  runAndCommit("npx ng add @angular/pwa --interactive=false --skip-confirmation=true", {
     cwd: projectName,
   });
 }
