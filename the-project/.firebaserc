@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "social-devotion-staging": {
+      "hosting": {
+        "the-project": [
+          "social-devotion-staging"
+        ]
+      }
+    }
+  }
+}
