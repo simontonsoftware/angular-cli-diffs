@@ -55,8 +55,9 @@ if (flags.has("-fire")) {
   console.error("@angular/fire must be added manually. Run this and commit:");
   console.log("cd the-project && npx ng add @angular/fire");
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+} else {
+  rimraf.sync(`${projectName}/node_modules`);
 }
-rimraf.sync(`${projectName}/node_modules`);
 
 function runAndCommit(
   command: string,
