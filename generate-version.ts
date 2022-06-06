@@ -15,11 +15,11 @@ run(`git checkout -b ${branch}`, {});
 rimraf.sync(projectName);
 runAndCommit(`yarn add -D @angular/cli@${version}`, {});
 runAndCommit(
-  `npx ng new ${projectName} --createApplication=${!flags.has(
+  `npx ng new ${projectName} --create-application=${!flags.has(
     "-noApp"
   )} --routing=${flags.has("-route")} --strict=${flags.has(
     "-strict"
-  )} --skip-install --interactive=false --packageManager=yarn --style=scss`,
+  )} --skip-install --interactive=false --package-manager=yarn --style=scss`,
   {}
 );
 if (flags.has("-eslint")) {
@@ -55,9 +55,9 @@ if (flags.has("-fire")) {
   console.error("@angular/fire must be added manually. Run this and commit:");
   console.log("cd the-project");
   console.log("npx ng add @angular/fire");
+  console.log("npx rimraf node_modules");
   console.log("git add .");
   console.log("cd ..");
-  console.log("npx rimraf the-project");
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 } else {
   rimraf.sync(`${projectName}/node_modules`);
