@@ -58,6 +58,7 @@ if (flags.has("-fire")) {
   console.log("npx rimraf node_modules");
   console.log("git add .");
   console.log("cd ..");
+  console.log(`git commit -m "add angular fire"`);
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 } else {
   rimraf.sync(`${projectName}/node_modules`);
