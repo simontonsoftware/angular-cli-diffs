@@ -183,6 +183,15 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/cdk@14.1.1":
+  version "14.1.1"
+  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-14.1.1.tgz#34e40a12e78b3a9db902d6c3fb3a407cc6875e43"
+  integrity sha512-Um4d5aWp7ACHd7O2cF3B4IXbQrnzMVvKlUVoKIBI4+EcCF70vAJrfXrAJoXIzLpte3MCDa6wO3wUX7uIJ4VlAQ==
+  dependencies:
+    tslib "^2.3.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~14.1.2":
   version "14.1.2"
   resolved "https://registry.npmjs.org/@angular/cli/-/cli-14.1.2.tgz#4dc1ccac2d98dfca51ef7ec78405925bda933021"
@@ -250,6 +259,13 @@
   version "14.1.2"
   resolved "https://registry.npmjs.org/@angular/forms/-/forms-14.1.2.tgz#b141726d74fa41a08eba6e0787460cdbee41a9d2"
   integrity sha512-9qXbYVo3mgz7SiSZzt5y/SonccASLKr8HSLlTGwnXKHlBAWA4tgdAR5Dqs+rKpoJI8VRF29Cu76fqytl60tCVA==
+  dependencies:
+    tslib "^2.3.0"
+
+"@angular/material@14.1.1":
+  version "14.1.1"
+  resolved "https://registry.npmjs.org/@angular/material/-/material-14.1.1.tgz#fd8021addad113476d29ac279e23aa2a86022e08"
+  integrity sha512-HU83cgnAayItSXhyMdu1+edXj2DMjGXndvFicf300JtyliyjFmVzuM78O7hIJWLhT4Mohh/GkTlOSp4sc8xXhQ==
   dependencies:
     tslib "^2.3.0"
 
@@ -5282,6 +5298,11 @@ parse5-sax-parser@^6.0.1:
   integrity sha512-kXX+5S81lgESA0LsDuGjAlBybImAChYRMT+/uKCEXFBFOeEhS52qUCydGhU3qLRD8D9DVjaUo821WK7DM4iCeg==
   dependencies:
     parse5 "^6.0.1"
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
 parse5@^6.0.1:
   version "6.0.1"
