@@ -29,6 +29,8 @@ if (flags.has("-eslint")) {
   if (flags.has("-noApp")) {
     runAndCommit(`ng config cli.defaultCollection @angular-eslint/schematics`);
   }
+  runAndCommit(`npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`);
+  runAndCommit(`npx ng config "schematics.@angular-eslint/schematics:library.setParserOptionsProject" true`);
 }
 if (flags.has("-subApp")) {
   runAndCommit(
