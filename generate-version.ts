@@ -44,7 +44,7 @@ if (flags.has("-lib")) {
 }
 if (flags.has("-mat")) {
   runAndCommit(
-    "npx ng add @angular/material --interactive=false --skip-confirmation=true"
+    "npx ng add @angular/material --interactive=false --skip-confirmation=true --theme=custom --typography"
   );
 }
 if (flags.has("-pwa")) {
