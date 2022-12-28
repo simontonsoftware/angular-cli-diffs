@@ -44,13 +44,16 @@ if (flags.has("-lib")) {
 }
 if (flags.has("-mat")) {
   runAndCommit(
-    "npx ng add @angular/material --interactive=false --skip-confirmation=true --theme=custom --typography"
+    "npx ng add @angular/material --theme=custom --typography --interactive=false --skip-confirmation=true"
   );
 }
 if (flags.has("-pwa")) {
   runAndCommit(
     "npx ng add @angular/pwa --interactive=false --skip-confirmation=true"
   );
+}
+if (flags.has("-worker")) {
+  runAndCommit(`npx ng generate web-worker app`);
 }
 if (flags.has("-fire")) {
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
