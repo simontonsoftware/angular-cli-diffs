@@ -52,6 +52,9 @@ if (flags.has("-pwa")) {
     "npx ng add @angular/pwa --interactive=false --skip-confirmation=true"
   );
 }
+if (flags.has("-worker")) {
+  runAndCommit(`npx ng generate web-worker app`);
+}
 if (flags.has("-fire")) {
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   console.error("@angular/fire must be added manually. Run this and commit:");
