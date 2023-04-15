@@ -13,13 +13,13 @@ const branch = version + Array.from(flags).sort().join("");
 
 run(`git checkout -b ${branch}`, {});
 rimraf.sync(projectName);
-runAndCommit(`yarn add -D @angular/cli@${version}`, {});
+runAndCommit(`npm install --save-dev @angular/cli@${version}`, {});
 runAndCommit(
   `npx ng new ${projectName} --create-application=${!flags.has(
     "-noApp"
-  )} --routing=${flags.has("-route")} --strict=${flags.has(
-    "-strict"
-  )} --skip-install --interactive=false --package-manager=yarn --style=scss`,
+  )} --routing=${flags.has("-route")} --standalone=${flags.has(
+    "-standalone"
+  )} --skip-install --interactive=false --style=scss`,
   {}
 );
 if (flags.has("-eslint")) {
@@ -29,8 +29,12 @@ if (flags.has("-eslint")) {
   if (flags.has("-noApp")) {
     runAndCommit(`ng config cli.defaultCollection @angular-eslint/schematics`);
   }
-  runAndCommit(`npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`);
-  runAndCommit(`npx ng config "schematics.@angular-eslint/schematics:library.setParserOptionsProject" true`);
+  runAndCommit(
+    `npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`
+  );
+  runAndCommit(
+    `npx ng config "schematics.@angular-eslint/schematics:library.setParserOptionsProject" true`
+  );
 }
 if (flags.has("-subApp")) {
   runAndCommit(
