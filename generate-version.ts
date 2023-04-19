@@ -8,8 +8,17 @@ const applicationName = "the-application";
 const libraryName = "the-library";
 
 const version = process.argv[2];
+const majorVersion = version.split(".")[0];
+const minorVersion = version
+  .split(".")
+  .slice(0, 2)
+  .join(".");
 const flags = new Set(process.argv.slice(3));
-const branch = version + Array.from(flags).sort().join("");
+const branch =
+  version +
+  Array.from(flags)
+    .sort()
+    .join("");
 
 run(`git checkout -b ${branch}`, {});
 rimraf.sync(projectName);
@@ -24,13 +33,17 @@ runAndCommit(
 );
 if (flags.has("-eslint")) {
   runAndCommit(
-    `npx ng add @angular-eslint/schematics --interactive=false --skip-confirmation=true`
+    `npx ng add @angular-eslint/schematics@${majorVersion} --interactive=false --skip-confirmation=true`
   );
   if (flags.has("-noApp")) {
     runAndCommit(`ng config cli.defaultCollection @angular-eslint/schematics`);
   }
-  runAndCommit(`npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`);
-  runAndCommit(`npx ng config "schematics.@angular-eslint/schematics:library.setParserOptionsProject" true`);
+  runAndCommit(
+    `npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`
+  );
+  runAndCommit(
+    `npx ng config "schematics.@angular-eslint/schematics:library.setParserOptionsProject" true`
+  );
 }
 if (flags.has("-subApp")) {
   runAndCommit(
@@ -43,8 +56,9 @@ if (flags.has("-lib")) {
   );
 }
 if (flags.has("-mat")) {
+  const extraArgs = flags.has("-noApp") ? ` --project=${applicationName}` : "";
   runAndCommit(
-    "npx ng add @angular/material --theme=custom --typography --interactive=false --skip-confirmation=true"
+    `npx ng add @angular/material@${minorVersion} --theme=custom --typography${extraArgs} --interactive=false --skip-confirmation=true`
   );
 }
 if (flags.has("-pwa")) {
