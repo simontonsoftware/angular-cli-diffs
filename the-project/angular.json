@@ -9,5 +9,10 @@
     ]
   },
   "newProjectRoot": "projects",
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    }
+  },
   "projects": {}
 }
