@@ -9,16 +9,9 @@ const libraryName = "the-library";
 
 const version = process.argv[2];
 const majorVersion = version.split(".")[0];
-const minorVersion = version
-  .split(".")
-  .slice(0, 2)
-  .join(".");
+const minorVersion = version.split(".").slice(0, 2).join(".");
 const flags = new Set(process.argv.slice(3));
-const branch =
-  version +
-  Array.from(flags)
-    .sort()
-    .join("");
+const branch = version + Array.from(flags).sort().join("");
 
 run(`git checkout -b ${branch}`, {});
 rimraf.sync(projectName);
@@ -35,9 +28,6 @@ if (flags.has("-eslint")) {
   runAndCommit(
     `npx ng add @angular-eslint/schematics@${majorVersion} --interactive=false --skip-confirmation=true`
   );
-  if (flags.has("-noApp")) {
-    runAndCommit(`ng config cli.defaultCollection @angular-eslint/schematics`);
-  }
   runAndCommit(
     `npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`
   );
