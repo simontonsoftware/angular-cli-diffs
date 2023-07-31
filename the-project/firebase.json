@@ -1,9 +1,0 @@
-{
-  "hosting": [
-    {
-      "target": "the-project",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ]
-}
