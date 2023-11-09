@@ -22,7 +22,6 @@ The branch names reveal which options were used to generate them. The options ar
 - **-noApp:** scaffolds the project with `--createApplication=flase`
 - **-pwa:** includes configuration for the app to be a progressive web app, added with `ng add @angular/pwa`
 - **-route:** includes configuration for routing, added with the `--routing=true` flag when generating the original project
-- **-standalone:** scaffolds the project with the `--standalone` flag
 - **-subApp:** includes an application project, added with `ng generate application the-application`
 - **-worker:** includes a web worker, added with `ng generate web-worker app`
 
@@ -30,4 +29,4 @@ The branch names reveal which options were used to generate them. The options ar
 
 1. Start from `master`
 1. Ensure you have opted out analytics by running `ng analytics off`
-1. `npm run gen -- X.X.X [-eslint] [-fire] [-lib] [-mat] [-noApp] [-pwa] [-route] [-standalone] [-subApp] [-worker]`
+1. `npm run gen -- X.X.X [-eslint] [-fire] [-lib] [-mat] [-noApp] [-pwa] [-route] [-subApp] [-worker]`

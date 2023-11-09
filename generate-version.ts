@@ -19,8 +19,8 @@ runAndCommit(`npm install --save-dev @angular/cli@${version}`, {});
 runAndCommit(
   `npx ng new ${projectName} --create-application=${!flags.has(
     "-noApp"
-  )} --routing=${flags.has("-route")} --standalone=${flags.has(
-    "-standalone"
+  )} --routing=${flags.has(
+    "-route"
   )} --skip-install --interactive=false --style=scss`,
   {}
 );
@@ -37,7 +37,9 @@ if (flags.has("-eslint")) {
 }
 if (flags.has("-subApp")) {
   runAndCommit(
-    `npx ng generate application ${applicationName} --skip-install --interactive=false`
+    `npx ng generate application ${applicationName} --routing=${flags.has(
+      "-route"
+    )} --skip-install --interactive=false`
   );
 }
 if (flags.has("-lib")) {
