@@ -29,4 +29,5 @@ The branch names reveal which options were used to generate them. The options ar
 
 1. Start from `master`
 1. Ensure you have opted out analytics by running `ng analytics off`
+1. If you want to know the latest version: `npm view @angluar/cli version`
 1. `npm run gen -- X.X.X [-eslint] [-fire] [-lib] [-mat] [-noApp] [-pwa] [-route] [-subApp] [-worker]`
