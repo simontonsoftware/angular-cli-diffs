@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "projects/the-application/src/custom-theme.scss",
               "projects/the-application/src/styles.css"
             ],
             "scripts": []
