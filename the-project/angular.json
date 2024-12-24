@@ -3,6 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {},
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    }
+  },
   "cli": {
     "schematicCollections": [
       "angular-eslint"
