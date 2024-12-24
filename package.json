@@ -3,6 +3,7 @@
     "gen": "ts-node generate-version"
   },
   "devDependencies": {
+    "@angular/cli": "^19.0.6",
     "@types/node": "^18.0.0",
     "@types/rimraf": "^4.0.0",
     "prettier": "^2.0.5",
