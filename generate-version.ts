@@ -62,14 +62,16 @@ if (flags.has("-worker")) {
   runAndCommit(`npx ng generate web-worker app`);
 }
 if (flags.has("-fire")) {
+  // steps from https://firebase.google.com/docs/hosting/quickstart
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-  console.error("@angular/fire must be added manually. Run this and commit:");
+  console.error(
+    "firebase hosting must be added manually. Run this and commit:"
+  );
   console.log("cd the-project");
-  console.log("npx ng add @angular/fire");
-  console.log("npx rimraf node_modules");
+  console.log("firebase init hosting");
   console.log("git add .");
   console.log("cd ..");
-  console.log(`git commit -m "add angular fire"`);
+  console.log(`git commit -m "add firebase hosting"`);
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 } else {
   rimraf.sync(`${projectName}/node_modules`);
