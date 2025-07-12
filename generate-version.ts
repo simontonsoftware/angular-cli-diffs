@@ -26,13 +26,13 @@ runAndCommit(
 );
 if (flags.has("-eslint")) {
   runAndCommit(
-    `npx ng add @angular-eslint/schematics@${majorVersion} --interactive=false --skip-confirmation=true`
+    `npx ng add angular-eslint --interactive=false --skip-confirmation=true`
   );
   runAndCommit(
-    `npx ng config "schematics.@angular-eslint/schematics:application.setParserOptionsProject" true`
+    `npx ng config "schematics.angular-eslint:application.setParserOptionsProject" true`
   );
   runAndCommit(
-    `npx ng config "schematics.@angular-eslint/schematics:library.setParserOptionsProject" true`
+    `npx ng config "schematics.angular-eslint:library.setParserOptionsProject" true`
   );
 }
 if (flags.has("-subApp")) {
