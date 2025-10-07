@@ -48,9 +48,9 @@ if (flags.has("-lib")) {
   );
 }
 if (flags.has("-mat")) {
-  const extraArgs = flags.has("-noApp") ? ` --project=${applicationName}` : "";
+  const extraArgs = flags.has("-noApp") ? `--project=${applicationName}` : "";
   runAndCommit(
-    `npx ng add @angular/material@${minorVersion} --theme=custom --typography${extraArgs} --interactive=false --skip-confirmation=true`
+    `npx ng add @angular/material@${minorVersion} --theme=custom ${extraArgs} --interactive=false --skip-confirmation=true`
   );
 }
 if (flags.has("-pwa")) {
