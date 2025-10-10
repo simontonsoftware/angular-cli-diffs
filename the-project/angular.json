@@ -104,6 +104,11 @@
       }
     }
   },
+  "schematics": {
+    "angular-eslint:application": {
+      "setParserOptionsProject": true
+    }
+  },
   "cli": {
     "schematicCollections": [
       "angular-eslint"
