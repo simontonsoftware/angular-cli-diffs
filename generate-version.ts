@@ -65,13 +65,13 @@ if (flags.has("-fire")) {
   // steps from https://firebase.google.com/docs/hosting/quickstart
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   console.error(
-    "firebase hosting must be added manually. Run this and commit:"
+    "Firebase hosting must be added manually. Run this, and commit:"
   );
   console.log("cd the-project");
   console.log("firebase init hosting");
   console.log("git add .");
   console.log("cd ..");
-  console.log(`git commit -m "add firebase hosting"`);
+  console.log(`git commit -m "firebase init hosting"`);
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 } else {
   rimraf.sync(`${projectName}/node_modules`);
