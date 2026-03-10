@@ -15,8 +15,11 @@ Inspired by https://github.com/cexbrayat/angular-cli-diff, this project does the
 Visit a URL like this to view the relevant diffs: https://github.com/simontonsoftware/angular-cli-diffs/compare/7.0.5..8.0.0. Ignore any files that are at the root of the repository; the relevant files are all in `the-project/`.
 
 The branch names reveal which options were used to generate them. The options are:
+
 - **-eslint:** includes angular-eslint config, added with `ng add @angular-eslint/schematics`
 - **-fire:** includes firebase, added with `ng add @angular/fire`
+- **-ghActions:** actually does nothing! By convention, add this if during the interactive prompts for `-fire` you will choose to add GitHub actions to automatically deploy the app.
+- **-karma:** sets the test runner to Karma (default is Vitest).
 - **-lib:** includes a library project, added with `ng generate library the-library`
 - **-mat:** includes material design, added with `ng add @angular/material --theme=custom --typography`
 - **-noApp:** scaffolds the project with `--createApplication=flase`
@@ -30,5 +33,4 @@ The branch names reveal which options were used to generate them. The options ar
 1. Start from `master`
 1. Ensure you have opted out analytics by running `ng analytics off`
 1. If you want to know the latest version: `npm view @angular/cli version`
-1. `npm.cmd run gen -- X.X.X [-eslint] [-fire] [-ghActions] [-lib] [-mat] [-noApp] [-pwa] [-route] [-subApp] [-worker]`
-  - Specify `-ghActions` for the sake of branch naming. Whether you actually include the GitHub actions to deploy the app depends on interactive prompts you choose during `-fire`.
+1. `npm.cmd run gen -- X.X.X [-eslint] [-fire] [-ghActions] [-karma] [-lib] [-mat] [-noApp] [-pwa] [-route] [-subApp] [-worker]`

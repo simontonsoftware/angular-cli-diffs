@@ -19,9 +19,9 @@ runAndCommit(`npm install --save-dev @angular/cli@${version}`, {});
 runAndCommit(
   `npx ng new ${projectName} --create-application=${!flags.has(
     "-noApp"
-  )} --routing=${flags.has(
-    "-route"
-  )} --skip-install --interactive=false --style=scss`,
+  )} --routing=${flags.has("-route")} ${
+    flags.has("-karma") ? "--test-runner=karma" : ""
+  } --skip-install --interactive=false --style=scss`,
   {}
 );
 if (flags.has("-eslint")) {
