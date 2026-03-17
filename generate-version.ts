@@ -13,15 +13,17 @@ const minorVersion = version.split(".")[1];
 const flags = new Set(process.argv.slice(3));
 const branch = version + Array.from(flags).sort().join("");
 
+// args available in `new`, `generate application`, and `generate library`. (Note that in the docs you have to check both "generate" and "application"/"library".)
+const commonArgs = `${flags.has("-karma") ? "--test-runner=karma" : ""} --skip-install --interactive=false`;
+const commonAppArgs = `${commonArgs} ${flags.has("-route") ? "--routing=true" : ""} --style=scss`;
+
 run(`git checkout -b ${branch}`, {});
 rimraf.sync(projectName);
 runAndCommit(`npm install --save-dev @angular/cli@${version}`, {});
 runAndCommit(
   `npx ng new ${projectName} --create-application=${!flags.has(
     "-noApp"
-  )} --routing=${flags.has("-route")} ${
-    flags.has("-karma") ? "--test-runner=karma" : ""
-  } --skip-install --interactive=false --style=scss`,
+  )} ${commonAppArgs}`,
   {}
 );
 if (flags.has("-eslint")) {
@@ -37,14 +39,12 @@ if (flags.has("-eslint")) {
 }
 if (flags.has("-subApp")) {
   runAndCommit(
-    `npx ng generate application ${applicationName} --routing=${flags.has(
-      "-route"
-    )} --skip-install --interactive=false`
+    `npx ng generate application ${applicationName} ${commonAppArgs}`
   );
 }
 if (flags.has("-lib")) {
   runAndCommit(
-    `npx ng generate library ${libraryName} --skip-install --interactive=false`
+    `npx ng generate library ${libraryName} ${commonArgs}`
   );
 }
 if (flags.has("-mat")) {
