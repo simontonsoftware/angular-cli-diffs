@@ -27,10 +27,11 @@ The branch names reveal which options were used to generate them. The options ar
 - **-route:** includes configuration for routing, added with the `--routing=true` flag when generating the original project
 - **-subApp:** includes an application project, added with `ng generate application the-application`
 - **-worker:** includes a web worker, added with `ng generate web-worker app`
+- **-zone:** includes zone.js
 
 ## Generating new diffs
 
 1. Start from `master`
 1. Ensure you have opted out analytics by running `ng analytics off`
 1. If you want to know the latest version: `npm view @angular/cli version`
-1. `npm.cmd run gen -- X.X.X [-eslint] [-fire] [-ghActions] [-karma] [-lib] [-mat] [-noApp] [-pwa] [-route] [-subApp] [-worker]`
+1. `npm.cmd run gen -- X.X.X [-eslint] [-fire] [-ghActions] [-karma] [-lib] [-mat] [-noApp] [-pwa] [-route] [-subApp] [-worker] [-zone]`
