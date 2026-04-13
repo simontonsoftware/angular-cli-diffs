@@ -17,6 +17,9 @@
     },
     "angular-eslint:application": {
       "setParserOptionsProject": true
+    },
+    "angular-eslint:library": {
+      "setParserOptionsProject": true
     }
   },
   "projects": {}
