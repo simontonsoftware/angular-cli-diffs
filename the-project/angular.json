@@ -12,6 +12,9 @@
     },
     "@schematics/angular:library": {
       "testRunner": "karma"
+    },
+    "angular-eslint:application": {
+      "setParserOptionsProject": true
     }
   },
   "projects": {
