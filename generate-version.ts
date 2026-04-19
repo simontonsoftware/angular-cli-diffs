@@ -15,7 +15,7 @@ const branch = version + Array.from(flags).sort().join("");
 
 // args available in `new`, `generate application`, and `generate library`. (Note that in the docs you have to check both "generate" and "application"/"library".)
 const commonArgs = `${flags.has("-karma") ? "--test-runner=karma" : ""} --skip-install --interactive=false`;
-const commonAppArgs = `${commonArgs} ${flags.has("-route") ? "--routing=true" : ""} --zoneless=${!flags.has("-zone")} --style=scss`;
+const commonAppArgs = `${commonArgs} --routing=${flags.has("-route")} --zoneless=${!flags.has("-zone")} --style=scss`;
 
 run(`git checkout -b ${branch}`, {});
 rimraf.sync(projectName);
